@@ -1,0 +1,25 @@
+html{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+div{
+    width: 50%;
+    margin: 25%;
+    margin-top: 5%;
+    margin-bottom: 0;
+}
+img{
+    width: 100%;
+    border: solid white;
+    border-width: 5px;
+    border-radius: 15px;
+}
+h1{
+    text-transform: uppercase;
+    font-family: 'Caveat', cursive;
+}
+p{
+    font-family: 'Yellowtail', cursive;
+    font-size: 20pt;
+}

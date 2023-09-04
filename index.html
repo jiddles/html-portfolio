@@ -1,29 +1,71 @@
 <!DOCTYPE html>
 <html lang="eng">
-    <head>
+    <head id="head">
         <meta charset="UTF-18">
-        <title>Justin's Portfolio</title>
+        <title>Justins Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
     </head>
 
     <body>
-        <h1>Justin Liddell</h1>
-        <h2>Web Developer</h2>
+        <div>        
+            <h1>Justin Liddell</h1>
+            <h2>Web Developer</h2>
+        </div>
 
         <hr />
         <h3>Showcase of my projects:</h3>
+        <button onclick="addcss()" id="button">toggle css</button>
         <p>click the title or image to view the project.</p>
 
         <ol>
-        <li><p><a href="./public/birthday-invite.html">Birthday Invite</a></p>
-        <a href="./public/birthday-invite.html"><img src="./assets/images/birthday-invite.png" height="250" /></a></li>
+        <div class="content">
+            <li><p><a href="./public/birthday-invite.html">Birthday Invite</a></p>
+            <a href="./public/birthday-invite.html"><img src="./assets/images/birthday-invite.png" height="250" /></a></li>
+        </div>
 
-        <li><p><a href="./public/movie-ranking.html">Top Movies</a></p>
-        <a href="./public/movie-ranking.html"><img src="./assets/images/movie-ranking.png" height="250" /></a></li>
-        </ol>
         <hr />
 
-        <p><a href="./public/about.html">About me</a></p>
-        <p><a href="./public/contact.html">Contact me</a></p>
+        <div class="content">
+            <li><p><a href="./public/movie-ranking.html">Top Movies</a></p>
+            <a href="./public/movie-ranking.html"><img src="./assets/images/movie-ranking.png" height="250" /></a></li>
+        </div>
+
+        <hr />
+
+        <div class="content">
+            <li><p><a href="./public/color-vocab/index.html">Colour Vocab</a></p>
+            <a href="./public/color-vocab/index.html"><img src="./assets/images/color-vocab.jpg" height="250" /></a></li>
+        </div>
+
+        <hr />
+
+        <div class="content">
+            <li><p><a href="./public/motivation-poster/index.html">Motivatinal Poster</a></p>
+            <a href="./public/motivation-poster/index.html"><img src="./assets/images/motivatinal-poster.jpg" height="250" /></a></li>
+        </div>
+
+        </ol>
+
+        <hr />
+
+        <div>
+            <p><a href="./public/about.html">About me</a></p>
+            <p><a href="./public/contact.html">Contact me</a></p>
+        </div>
+        
+        <script>
+            let counter = 0
+            function addcss() {
+                counter++
+                if (counter %2 !== 0) {
+                  document.getElementById("head").innerHTML = '  <title>Justins Portfolio</title> \n<link rel="stylesheet" href="./styles.css" />'
+                }else{
+                  document.getElementById("head").innerHTML = '  <title>Justins Portfolio</title>'
+                }
+            }
+        </script>
     </body>
 </html>
 
